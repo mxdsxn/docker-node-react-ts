@@ -9,7 +9,10 @@
     },
     "scripts": {
         "start": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts",
-        "build": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts"
+        "build": "tsc",
+        "start:prod": "node dist/server.js",
+        "docker:build": "docker build -t docker/nodets .",
+        "docker:image": "docker run -v ${PWD}:/app -v /app/node_modules -p 3002:3000 --rm docker/nodets"
     },
     "devDependencies": {
         "@types/express": "^4.17.9",
