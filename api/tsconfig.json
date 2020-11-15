@@ -22,15 +22,20 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@services/*": [
-        "./src/services"
+      "@services": [
+        "./src/services/"
       ],
-      "@controllers/*": [
+      "@controllers": [
         "./src/controllers"
       ],
     }
   },
   "include": [
     "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/tests/*.spec.ts",
   ]
 }
