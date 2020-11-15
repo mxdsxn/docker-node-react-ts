@@ -29,5 +29,8 @@
         "./src/controllers"
       ],
     }
-  }
+  },
+  "include": [
+    "./src/**/*"
+  ]
 }
