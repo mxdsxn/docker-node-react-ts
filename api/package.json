@@ -9,8 +9,8 @@
     },
     "scripts": {
         "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
-        "docker:build": "docker build -t docker/nodets .",
-        "docker:image": "docker run -v ${PWD}:/app -v /app/node_modules -p 3002:3000 --rm docker/nodets",
+        "docker:build": "docker build -t docker/nodets_api .",
+        "docker:image": "docker run -v ${PWD}:/app -v /app/node_modules -p 3002:3000 --rm docker/nodets_api",
         "lint": "eslint . --ext .ts",
         "lint:fix": "eslint . --ext .ts --fix",
         "start": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts",
